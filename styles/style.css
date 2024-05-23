@@ -1,0 +1,2607 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+}
+
+:root {
+    --color-primary: hsl(359, 96%, 44%);
+
+    --color-secundary: hsl(220, 60%, 40%);
+    --color-text: hsl(240, 30%, 21%);
+
+    --color-light: hsl(222, 22%, 93%);
+    --color-dark: hsl(0, 14%, 12%);
+
+    --color-success: hsl(137, 63%, 42%);
+    --color-danger: hsl(7, 63%, 42%);
+    --color-black: hsl(0, 0%, 0%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --color-gray1: hsl(0, 0%, 10%);
+    --color-gray2: hsl(0, 0%, 30%);
+    --color-gray3: hsl(0, 0%, 50%);
+    --color-gray4: hsl(0, 0%, 70%);
+    --color-gray5: hsl(0, 0%, 90%);
+    --color-gray6: hsl(0, 0%, 95%);
+}
+body {
+    overflow-x: hidden;
+}
+/* ========================================== GENERAL STYLES ========================================== */
+/* ========================================== GENERAL STYLES ========================================== */
+/* ========================================== GENERAL STYLES ========================================== */
+a {
+    display: inline-block;
+}
+
+a.ymrlogo img{ 
+    width: 10rem;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    width: fit-content;
+    cursor: pointer;
+}
+
+.btn.small {
+    font-size: 13px;
+    padding: 5px 10px;
+}
+
+/*contents com display flex*/
+.space-bet-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/*Listas Inline*/
+.inline_list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.section-heading {
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 2em;
+    color: var(--color-text);
+    width: 100%;
+}
+
+.section-heading.text-right {
+    text-align: right;
+}
+
+.section-heading.text-center {
+    text-align: center;
+}
+
+.section-heading-history { 
+    height: 2rem;
+    color: var(--color-gray4);
+}
+
+.section-heading-history a{ 
+    color: var(--color-gray3);
+    font-weight: 600;
+}
+
+.section-heading-history a.actual{ 
+    color: var(--color-gray2);
+}
+
+image {
+    width: 100%;
+}
+
+.green {
+    font-weight: 600;
+    color: var(--color-success);
+}
+/* ========================================== GENERAL STYLES ========================================== */
+/* ========================================== GENERAL STYLES ========================================== */
+/* ========================================== GENERAL STYLES ========================================== */
+
+/* ========================================== NAV ========================================== */
+/* ========================================== NAV ========================================== */
+/* ========================================== NAV ========================================== */
+.responsive-content {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    padding: 0 60px;
+    background: var(--color-text);
+}
+
+.content{
+    width: 100%;
+    padding: 10px 0;
+    padding-bottom: 0;
+    max-width: 2400px;
+}
+
+nav .content ul li a{
+    color: var(--color-gray6);
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav .content ul li a.active{
+    color: var(--color-text);
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: var(--color-gray5);
+    position: relative;
+}
+
+/* ========================================== NAV ========================================== */
+/* ========================================== NAV ========================================== */
+/* ========================================== NAV ========================================== */
+
+/* ========================================== RESPONSIVE NAV ========================================== */
+/* ========================================== RESPONSIVE NAV ========================================== */
+/* ========================================== RESPONSIVE NAV ========================================== */
+
+.toggle-side-menu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle-side-menu > div{
+    width: 30px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--color-gray6);
+    margin: 6px 0;
+    transition: 0.2s;
+}
+
+.toggle-side-menu.change .barra1 {
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.toggle-side-menu.change .barra2 {
+    opacity: 0;
+}
+
+.toggle-side-menu.change .barra3 {
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+/* ========================================== RESPONSIVE NAV ========================================== */
+/* ========================================== RESPONSIVE NAV ========================================== */
+/* ========================================== RESPONSIVE NAV ========================================== */
+
+/* ========================================== SIDE MENU ========================================== */
+/* ========================================== SIDE MENU ========================================== */
+/* ========================================== SIDE MENU ========================================== */
+.side-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-gray6);
+    height: 0;
+    padding: 0 1.5rem;
+    z-index: 101;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.toggle-side-menu.change ~ .side-menu {
+    padding: 1.5rem;
+    height: 100vh;
+}
+
+.side-menu li a{
+    padding: 10px;
+    width: 100%;
+    color: var(--color-text);
+    border-radius: 5px;
+}
+
+.side-menu li a:active{
+    padding: 10px;
+    color: var(--color-text);
+    border-radius: 5px !important;
+    background: var(--color-gray5);
+}
+/* ========================================== SIDE MENU ========================================== */
+/* ========================================== SIDE MENU ========================================== */
+/* ========================================== SIDE MENU ========================================== */
+
+/* ========================================== HEADER ========================================== */
+/* ========================================== HEADER ========================================== */
+/* ========================================== HEADER ========================================== */
+
+header {
+    width: 100%;
+    padding: 0 60px;
+    background: var(--color-gray5);
+}
+
+header .content{
+    padding: 20px 0;
+    padding-bottom: 20px;
+}
+
+header .pesquisar-form{
+    display: flex;
+}
+
+header .pesquisar-form input{
+    width: 30rem;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+header .pesquisar-form select{
+    padding: 10px;
+}
+
+header .pesquisar-form button{
+    padding: 10px;
+    border: 1px solid var(--color-secundary);
+    background: var(--color-secundary);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+header .cart{
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.show-ocult-list {
+    position: relative;
+    cursor: pointer;
+}
+
+.show-ocult-list:hover .ocult-list{
+    display: grid;
+}
+
+.ocult-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--color-text);
+    color: var(--color-gray6);
+    padding: 1rem;
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+    border-top: 3px solid var(--color-primary);
+}
+
+.ocult-list li a{
+    text-wrap: nowrap;
+    color: var(--color-gray6);
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.ocult-list li a:hover{
+    background: var(--color-secundary);
+}
+
+/* ========================================== HEADER ========================================== */
+/* ========================================== HEADER ========================================== */
+/* ========================================== HEADER ========================================== */
+
+/* ========================================== MAIN ========================================== */
+/* ========================================== MAIN ========================================== */
+/* ========================================== MAIN ========================================== */
+
+main {
+    width: 100%;
+}
+
+main img{
+    width: 100%;
+}
+
+/* ========================================== MAIN ========================================== */
+/* ========================================== MAIN ========================================== */
+/* ========================================== MAIN ========================================== */
+
+/* ========================================== HERO ========================================== */
+/* ========================================== HERO ========================================== */
+/* ========================================== HERO ========================================== */
+
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+  
+.slide {
+    display: block;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+  
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* ========================================== HERO ========================================== */
+/* ========================================== HERO ========================================== */
+/* ========================================== HERO ========================================== */
+
+/* ========================================== SECTIONS ========================================== */
+/* ========================================== SECTIONS ========================================== */
+/* ========================================== SECTIONS ========================================== */
+
+.main-body {
+    width: 100%;
+    padding: 30px 60px;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.main-body .main-section{
+    max-width: 100%;
+    display: grid;
+    gap: 10px;
+}
+
+.main-body .main-section .grid-layout{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 20px; 
+    margin: auto;
+    width: 100%;
+}
+
+.main-body .main-section .product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    margin: auto;
+    gap: 20px;
+    width: 100%;
+}
+
+.main-body .main-section .scroll-auto{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(90deg,transparent,#fff 5%,#fff 95%,transparent);
+}
+
+.main-body aside{
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.iframe-section {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.iframe-section iframe{
+    width: 100%;
+    height: 60vh;
+}
+
+.user-card{
+    width: 100%;
+    display: flex;
+    background: var(--color-gray5);
+    overflow: hidden;
+}
+/* ========================================== SECTIONS ========================================== */
+/* ========================================== SECTIONS ========================================== */
+/* ========================================== SECTIONS ========================================== */
+
+/* ========================================== CARD-FORM ========================================== */
+/* ========================================== CARD-FORM ========================================== */
+/* ========================================== CARD-FORM ========================================== */
+
+.card-form {
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--color-gray6);
+    border-radius: 5px;
+}
+
+.card-heading-text{
+    font-size: 1.7em;
+    font-weight: 700;
+    color: var(--color-secundary);
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.card-heading-text::before{
+    content: " ";
+    width: 10%;
+    position: absolute;
+    bottom: 0;
+    background: var(--color-primary);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+}
+
+.card-form span{
+    color: var(--color-gray2);
+}
+
+.card-form span a{
+    color: var(--color-gray1);
+    font-weight: 600;
+}
+
+/* ========================================== CARD-FORM ========================================== */
+/* ========================================== CARD-FORM ========================================== */
+/* ========================================== CARD-FORM ========================================== */
+
+
+/* ========================================== IMAGE-CARD ========================================== */
+/* ========================================== IMAGE-CARD ========================================== */
+/* ========================================== IMAGE-CARD ========================================== */
+
+.image-card {
+    background: var(--color-gray6);
+    border-radius: 5px;
+    position: relative;
+    height: 12rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-card img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-card .image-card-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+    z-index: 2;
+    width: 16rem;
+    display: grid;
+    gap: 10px;
+    background: linear-gradient(to right, var(--color-secundary), var(--color-secundary), transparent);
+    color: var(--color-white);
+}
+
+.image-card .image-card-text h2 {
+    font-size: 2em;
+}
+
+.image-card .image-card-text p {
+    font-size: 14px;
+}
+
+.image-card .image-card-text .btn {
+    margin-top: 10px;
+}
+/* ========================================== IMAGE-CARD ========================================== */
+/* ========================================== IMAGE-CARD ========================================== */
+/* ========================================== IMAGE-CARD ========================================== */
+
+/* ========================================== PRODUCT-CARD ========================================== */
+/* ========================================== PRODUCT-CARD ========================================== */
+/* ========================================== PRODUCT-CARD ========================================== */
+
+.product-card {
+    padding: 1rem;
+    border-radius: 5px;
+    background: var(--color-gray6);
+    transition: all 0.3s ease;
+}
+
+.product-card image{
+    width: 100%;
+}
+
+.product-card a{
+    width: 100%;
+    height: 100%;
+}
+
+.product-card:hover{
+    border-radius: 0;
+    background: var(--color-light);
+}
+
+.product-card h2{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* ========================================== PRODUCT-CARD ========================================== */
+/* ========================================== PRODUCT-CARD ========================================== */
+/* ========================================== PRODUCT-CARD ========================================== */
+
+/* ========================================== MIN PRODUC CARD ========================================== */
+/* ========================================== MIN PRODUC CARD ========================================== */
+/* ========================================== MIN PRODUC CARD ========================================== */
+
+.scroll-auto div{
+    display: flex;
+    animation: animate var(--t) linear infinite;
+}
+
+.scroll-auto div:nth-child(2) {
+    animation: animate2 var(--t) linear infinite;
+    animation-delay: calc(var(--t) / -2);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+.min-product-card{
+    display: flex;
+    align-items: center;
+    width: 18rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background: var(--color-light);
+    gap: 10px;
+    margin: 0 10px;
+}
+
+
+.min-product-card img{
+    width: 4rem;
+}
+
+.min-product-card p{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* ========================================== MIN PRODUC CARD ========================================== */
+/* ========================================== MIN PRODUC CARD ========================================== */
+/* ========================================== MIN PRODUC CARD ========================================== */
+
+/* ========================================== GENERAL FORM ========================================== */
+/* ========================================== GENERAL FORM ========================================== */
+/* ========================================== GENERAL FORM ========================================== */
+
+
+form .input-box {
+    position: relative;
+    margin: 22px 0;
+}
+
+form .input-box input,
+form .input-box textarea {
+    width: 100%;
+    padding: 1rem 1.35rem calc(0.75rem - 2px) 1.35rem;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: var(--color-dark);
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+form .input-box input[type= "submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: var(--color-secundary);
+    color: var(--color-white);
+}
+
+form .input-box input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset !important; /* Define a sombra do input */
+    -webkit-text-fill-color: var(--color-text) !important; /* Define a cor do texto */
+}
+
+.input-box label
+{
+    position: absolute;
+    top: 50%;
+    left: calc(1.35rem + 2px);
+    transform: translateY(-50%);
+    font-size: 14px;
+    transition: 0.5s;
+    color: var(--color-text);
+}
+
+.input-box label.label-textarea
+{
+    top: 20px;
+    left: calc(1.35rem + 2px);
+}
+
+form .input-box input:focus ~ label,
+form .input-box input:valid ~ label
+{
+    top: 27%;
+    font-size: 11px;
+    transition: 0.5s;
+    color: var(--color-text);
+}
+
+form .input-box textarea:focus ~ label,
+form .input-box textarea:valid ~ label
+{
+    top: 10px;
+    font-size: 11px;
+    transition: 0.5s;
+    color: var(--color-text);
+}
+
+.input-box .input-icon
+{
+    position: absolute;
+    top: 50%;
+    right: calc(1.35rem + 2px);
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.input-box .input-icon-textarea
+{
+    position: absolute;
+    top: 20px;
+    right: calc(1.35rem + 2px);
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+form .input-box input:focus ~ .input-icon,
+form .input-box textarea:focus ~ .input-icon
+{
+    transition: 0.5s;
+    color: var(--color-primary);
+}
+ 
+form .input-box input:valid ~ .input-icon,
+form .input-box textarea:valid ~ .input-icon
+{
+    transition: 0.5s;
+    color: var(--color-success);
+}
+
+.input-box .ic3
+{
+    width: 100%;
+    resize: none;
+    padding-bottom: 140px;
+}
+
+
+.input-box .ic3:focus ~ label,
+.input-box .ic3:valid ~ label
+{
+    top: 0.7rem;
+}
+
+.input-box .ic3 ~ label
+{
+    top: 1.5rem;
+    transform: none;
+}
+
+.input-box .ic3 ~ .input-icon
+{
+    top: 1.5rem;
+    transform: none;
+}
+
+
+form .input-box-enviar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+form .input-box-enviar .more{
+    position: relative;
+    background: white;
+    color: var(--color-primary);
+    bottom: 0;
+    text-align: center;
+    width: 130px;
+}
+
+form .input-box-enviar input{
+    padding: 10px;
+    border-radius: 3px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    width: 200px;
+    margin-right: 20px;
+    outline: none;
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+form .input-box-enviar input:hover{
+    color: var(--color-primary);
+    background-color: var(--color-neutral-2);
+    transition: 0.5s;
+}
+
+
+/* ========================================== GENERAL FORM ========================================== */
+/* ========================================== GENERAL FORM ========================================== */
+/* ========================================== GENERAL FORM ========================================== */
+
+/* ========================================== ASIDE SLIDES ========================================== */
+/* ========================================== ASIDE SLIDES ========================================== */
+/* ========================================== ASIDE SLIDES ========================================== */
+
+.aside-slideshow {
+    width: 100%;
+    position: relative;
+}
+  
+.aside-slide {
+    display: none;
+}
+
+/* ========================================== ASIDE SLIDES ========================================== */
+/* ========================================== ASIDE SLIDES ========================================== */
+/* ========================================== ASIDE SLIDES ========================================== */
+
+/* ========================================== ASIDE LIST ========================================== */
+/* ========================================== ASIDE LIST ========================================== */
+/* ========================================== ASIDE LIST ========================================== */
+
+.aside-ul {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.aside-ul li a{
+    width: 100%;
+    padding: 10px;
+    color: var(--color-text);
+}
+
+.aside-ul li a:hover{
+    color: var(--color-secundary);
+}
+
+.aside-ul li a.active{
+    color: var(--color-gray6);
+    background: var(--color-secundary);
+}
+
+/* ========================================== ASIDE LIST ========================================== */
+/* ========================================== ASIDE LIST ========================================== */
+/* ========================================== ASIDE LIST ========================================== */
+
+/* ========================================== PRODUTO-PAGE ========================================== */
+/* ========================================== PRODUTO-PAGE ========================================== */
+/* ========================================== PRODUTO-PAGE ========================================== */
+
+.product-view  .big-product-card {
+    padding: 1rem;
+    width: 22rem;
+    border-radius: 5px;
+    background-color: var(--color-gray6);
+}
+
+.product-view  .big-product-card .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.product-view  .big-product-card .row .column {
+    width: 4rem;
+}
+
+.product-view  .big-product-card .column img {
+    filter: grayscale(50%);
+    cursor: pointer; 
+}
+
+.product-view  .big-product-card .column img:hover {
+    filter: grayscale(0);
+}
+
+/* The expanding image main-image */
+.product-view  .big-product-card .main-image {
+    position: relative;
+    display: block;
+}
+
+.product-view .product-tab{
+    width: 100%;
+}
+
+.product-view .product-tab .product-tab-name h2{
+    width: 100%;
+    padding: 20px 0;
+    color: var(--color-secundary);
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.product-view .product-tab .product-tab-header{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    border-bottom: 5px solid var(--color-secundary);
+}
+
+.product-view .product-tab .product-tab-header button{
+    font-size: 15px;
+    padding: 10px 15px;
+    background: var(--color-gray4);
+    color: var(--color-white);
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+
+.product-view .product-tab .product-tab-header button.active{
+    background: var(--color-secundary);
+    color: var(--color-white);
+}
+
+.product-view .product-tab .product_tab_body{
+    padding: 1rem;
+    padding-bottom: 2rem;
+    background: var(--color-gray6);
+    color: var(--color-gray2);
+    display: none;
+    border-radius: 0 0 5px 5px;
+    min-height: 10rem;
+}
+
+.product-view .product-tab .product_tab_body.active{
+    display: block;
+}
+
+.product-view .product-tab .product_tab_body h3{
+    font-size:1.5em;
+    padding-bottom: 1rem;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.product-view .product-tab .product_tab_body p{
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.product-view .product-tab .product_tab_body a{
+    color: var(--color-secundary);
+    font-weight: 600;
+}
+
+.product-view .product-tab .produto-tab-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.5rem;
+}
+
+.add-cart-form{
+    display: flex;
+}
+
+.add-cart-form .min-input-box{
+    padding: 5px 10px;
+    background: var(--color-gray5);
+    font-size: 13px;
+    color: var(--color-gray3);
+}
+
+.add-cart-form .min-input-box input{
+    width: 5rem;
+    padding: 5px;
+}
+
+.add-cart-form button{
+    padding: 10px;
+    background: var(--color-secundary);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.add-cart-form button span{
+    font-weight: 800;
+}
+
+
+
+/* ========================================== PRODUTO-PAGE ========================================== */
+/* ========================================== PRODUTO-PAGE ========================================== */
+/* ========================================== PRODUTO-PAGE ========================================== */
+
+/* ========================================== MAIN TABLE ========================================== */
+/* ========================================== MAIN TABLE ========================================== */
+/* ========================================== MAIN TABLE ========================================== */
+
+.table-main{
+    width: 100%;
+    border-collapse: collapse;
+    padding-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table-main thead tr {
+    background: var(--color-text);
+}
+
+.table-main thead tr th{
+   padding: 15px;
+   border: 1px solid var(--color-light);
+   color: var(--color-gray6);
+}
+
+.table-main tbody tr{
+   background: var(--color-white);
+}
+
+.table-main tbody tr td{
+   padding: 15px 10px;
+   border: 1px solid var(--color-light);
+}
+
+.table-main tbody tr td.center{
+   text-align: center;
+}
+
+.table-main tbody tr:nth-child(odd) {
+    background-color: var(--color-gray5);
+}
+
+.table-main tbody tr:nth-child(odd) .min-input-box {
+    background-color: var(--color-white);
+}
+
+.table-main tfoot tr td {
+    text-align: center;
+    padding: 15px;
+}
+
+.table-main tfoot tr td form,
+.table-main tfoot tr td form .btn{
+    width: 100%;
+}
+
+.table-main tfoot tr td form .btn{
+    background: var(--color-secundary);
+}
+
+.table-main img{
+    width: 40px;
+}
+
+/* ========================================== MAIN TABLE ========================================== */
+/* ========================================== MAIN TABLE ========================================== */
+/* ========================================== MAIN TABLE ========================================== */
+
+/* ========================================== USER PAGE ========================================== */
+/* ========================================== USER PAGE ========================================== */
+/* ========================================== USER PAGE ========================================== */
+/*
+.user-card>div {
+    padding: 0;
+}
+*/
+.user-card-menu {
+    width: 20rem;
+    max-width: 20rem;
+    background: var(--color-text);
+    padding: 2.5rem 0;
+}
+
+.user-card-menu .user-card-menu-header{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.user-card-menu .user-card-menu-header img{
+    width: 100px;
+}
+
+.user-card-menu .user-card-menu-header h2{
+     color: var(--color-light);
+     font-size: 1.3em;
+}
+
+.user-card-menu .user-card-menu-header span{
+     color: var(--color-gray3);
+}
+
+.user-card-menu ul{
+    padding: 10px 0;
+}
+
+.user-card-menu ul li button{
+    padding: 15px;
+    width: 100%;
+    background: var(--color-text);
+    color: var(--color-white);
+    cursor: pointer;
+    border: 1px solid var(--color-dark);
+    text-align: left;
+}
+
+.user-card-menu ul li button.active{
+    background: var(--color-secundary);
+    color: var(--color-white);
+}
+
+.user-card-data {
+    width: 45rem;
+    background: var(--color-gray6);
+    padding: 2.5rem;
+    display: none;
+    position: relative;
+}
+
+.user-card-data.active {
+    display: block;
+}
+
+.user-card-data-header {
+    font-size: 1.5em;
+    padding-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-secundary);
+    text-align: center;
+}
+
+.user-card-data-body li{
+    padding: 10px;
+    color: var(--color-gray2);
+}
+
+.user-card-data-body li span{
+    font-weight: 600;
+    color: var(--color-gray1);
+}
+
+.user-card-data-footer {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    width: 100%;
+    text-align: right;
+}
+/* ========================================== USER PAGE ========================================== */
+/* ========================================== USER PAGE ========================================== */
+/* ========================================== USER PAGE ========================================== */
+
+/*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+/*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+/*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 150;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: hsla(220, 3%, 23%, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-btn {
+    position: fixed;
+    z-index: 160;
+    top: 20px;
+    left: 10px;
+}
+
+.fixed-btn span{
+    padding: 10px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-card {
+    width: 30rem;
+    padding: 3rem 2rem;
+    border-radius: 5px;
+    background: var(--color-light);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-card .form-card-heading{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-secundary);
+}
+
+.form-card form{
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.form-card form .slider-card{
+    width: 100%;
+    display: grid;
+    gap: 20px;
+}
+
+
+.form-card form .slider-card p{
+    font-size: 14px;
+    color: var(--color-secundary);
+    font-weight: 800;
+}
+
+.form-card form .slider-card .slider-card-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.form-card form .slider-card .slider-card-footer .control{
+    padding: 8px 10px;
+    border-radius: 5px;
+    background: var(--color-secundary);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.form-card form .input-box{
+    width: 100%;
+    position: relative;
+    margin: 0 0;
+}
+
+.form-card form .input-box label{
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-25%);
+    color: var(--color-gray4);
+    transition: all 0.4s ease;
+}
+
+/*Formulário*/
+.form-card form .input-box .icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--color-white);
+    background: var(--color-secundary);
+    height: 100%;
+    padding: 15px;
+    width: 3rem;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Formulário*/
+.form-card form .input-box input,
+.form-card form .input-box select{
+    padding: 20px 10px 10px 20px;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.form-card form .input-box input[type="file"]{
+    padding: 23px 10px 10px 20px;
+    background: var(--color-white);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: var(--color-text) !important;
+}
+
+/*Formulário*/
+.form-card form .input-box input:focus ~ label,
+.form-card form .input-box input:valid ~ label{
+    top: 15%;
+    color: var(--color-secundary);
+    left: 15px;
+    font-size: 12px;
+}
+/*Formulário*/
+.form-card form .input-box select ~ label{
+    top: 15%;
+    color: var(--color-secundary);
+    left: 15px;
+    font-size: 12px;
+}
+
+.form-card form button{
+    padding: 10px;
+    width: 100%;
+    color: var(--color-white);
+    background: var(--color-secundary);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form-card form button.control-width{
+    padding: 10px;
+    width: fit-content;
+    color: var(--color-white);
+    background: var(--color-secundary);
+    border-radius: 5px;
+}
+
+.form-card .form-card-botton{
+    padding: 10px 0;
+    width: 100%;
+    color: var(--color-text);
+}
+
+.form-card .form-card-botton a{
+    font-weight: 600;
+    color: var(--color-secundary);
+}
+
+.animate {
+-webkit-animation: animatezoom 0.6s;
+animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+from {-webkit-transform: scale(0)} 
+to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+from {transform: scale(0)} 
+to {transform: scale(1)}
+}
+
+
+/*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+/*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+/*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+
+.about-hero { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap-reverse;
+    padding: 20px;
+}
+
+.about-hero .left { 
+    width: 30rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.about-hero .right { 
+    width: 30rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.about-hero .right h2 { 
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--color-secundary);
+}
+
+.about-hero .right p { 
+    font-size: 1.35em;
+    font-weight: 400;
+    color: var(--color-gray3);
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.big-newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: var(--color-text);
+    padding: 2rem;
+}
+
+.big-newsletter .left {
+   width: 30rem;
+}
+
+.big-newsletter .left p{
+    font-size: 1.6em;
+    color: var(--color-white);
+}
+
+.big-newsletter .right{
+    font-size: 1.2em;
+    color: var(--color-white);
+}
+
+.big-newsletter .right form label{
+    color: var(--color-gray5);
+}
+
+.big-newsletter .right form .input-flex{
+    padding-top: 15px;
+}
+
+.big-newsletter .right form input{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.big-newsletter .right form button{
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--color-white);
+    background: var(--color-secundary);
+}
+
+.mvv {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.mvv .mvv-card{
+    width: 21rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    background: var(--color-gray6);
+    text-align: center;
+}
+
+.mvv .mvv-card i{
+    color: var(--color-primary);
+    font-size: 4em;
+    padding-bottom: 10px;
+}
+
+.mvv .mvv-card h3{
+    color: var(--color-text);
+    font-size: 2em;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.mvv .mvv-card p{
+    color: var(--color-gray2);
+    padding-bottom: 10px;
+    line-height: 24px;
+}
+.heading-div {
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+.bg-image-div {
+    position: relative;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.bg-image-div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; 
+    border-radius: 20px;
+}
+
+.bg-image-div p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7em;
+    color: var(--color-text);
+    background: var(--color-gray5);
+    padding: 1.5rem;
+    border-radius: 5px;
+    font-weight: 400;
+    width: 40rem;
+    line-height: 1.5em;
+}
+
+.flex2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: var(--color-gray6);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.flex2 .left{
+    max-width: 30rem;
+}
+
+
+.flex2 .texto h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.flex2 .right {
+    max-width: 30rem;
+}
+
+
+.flex2 .right form label{
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--color-gray6);
+}
+
+.flex2 .right form .input-wrap{
+    padding-top: 10px;
+}
+
+.flex2 .right form .input-wrap input[type=email]{
+    padding: 7px 13px;
+    width: 15rem;
+}
+
+.flex2 .right form .input-wrap input[type=submit]{
+    padding: 7px 13px;
+    background: var(--color-secundary);
+    color: var(--color-gray6);
+    cursor: pointer;
+}
+
+
+.flex2 .logos-box {
+    width: 35rem;
+    padding: 2rem;
+    background: var(--color-white);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px 10px;
+}
+
+.flex2 .logos-box img{
+    width: 8rem;
+}
+
+.flex2 .logos-box img.logo-grande{
+    width: auto;
+    height: 3rem;
+}
+
+
+/*==================================== ABOUT PAGE ==================================== */
+/*==================================== ABOUT PAGE ==================================== */
+/*==================================== ABOUT PAGE ==================================== */
+
+/*==================================== CONTACTE PAGE ==================================== */
+/*==================================== CONTACTE PAGE ==================================== */
+/*==================================== CONTACTE PAGE ==================================== */
+
+.contact-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-header img{
+    width: 60rem;
+    border-radius: 20px;
+    position: relative;
+}
+
+.contact-header img::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: var(--color-secundary);
+    mix-blend-mode: overlay;
+}
+
+.contact-div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-div>div{
+    width: 30rem;
+    background: var(--color-gray6);
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.contact-div .left h3{
+    font-size: 2.1em;
+    font-weight: 700;
+    color: var(--color-text);
+    padding-bottom: 10px;
+}
+
+.contact-div .right h3{
+    font-size: 2.1em;
+    font-weight: 700;
+    color: var(--color-text);
+    padding-bottom: 10px;
+}
+
+.contact-div .right .map{
+    border-bottom: 5px solid var(--color-text);
+    border-top: 5px solid var(--color-text);
+}
+
+.contact-div .right .icons{
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.contact-div .right .icons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--color-gray6);
+    background: var(--color-secundary);
+}
+
+.faqs-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 120px;
+}
+
+.faqs-div .section-heading{
+    font-size: 1.4em;
+    text-align: center;
+    padding-bottom:2s0px;
+}
+
+.faqs-div .faq{
+    max-width: 60rem;
+}
+
+.faqs-div .faq .faq-h1{
+    padding: 1rem;
+    font-size: 1.3em;
+    font-family: 700;
+    color: var(--color-white);
+    background: var(--color-text);
+    transition: all 0.3s ease-in-out;
+}
+
+.faqs-div .faq.active .faq-h1{
+    background: var(--color-secundary);
+}
+
+.faqs-div .faq .faq-p{
+    min-height: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 1.15em;
+    color: var(--color-gray1);
+    background: var(--color-gray6);
+    transition: all 0.3s ease-in-out;
+}
+
+.faqs-div .faq .faq-p p{
+    padding: 1rem;
+}
+
+.faqs-div .faq.active .faq-p{
+    min-height: 5rem;
+    font-size: 1.15em;
+    color: var(--color-gray1);
+    background: var(--color-gray6);
+}
+/*==================================== CONTACTE PAGE ==================================== */
+/*==================================== CONTACTE PAGE ==================================== */
+/*==================================== CONTACTE PAGE ==================================== */
+
+/* ========================================== AVISO DE ATIVIDADE ========================================== */
+/* ========================================== AVISO DE ATIVIDADE ========================================== */
+/* ========================================== AVISO DE ATIVIDADE ========================================== */
+
+.message-sec {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.message-sec .message{
+    max-width: 25rem;
+    border-radius: 5px;
+    background: var(--color-light);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.message-sec .message a{
+    padding: 10px;
+    width: 100%;
+    border: 5px;
+    cursor: pointer;
+    background: var(--color-secundary);
+    color: var(--color-white);
+}
+
+/* ========================================== AVISO DE ATIVIDADE ========================================== */
+/* ========================================== AVISO DE ATIVIDADE ========================================== */
+/* ========================================== AVISO DE ATIVIDADE ========================================== */
+
+/* ========================================== LISTA DE SUBCATEGORIAS ========================================== */
+/* ========================================== LISTA DE SUBCATEGORIAS ========================================== */
+/* ========================================== LISTA DE SUBCATEGORIAS ========================================== */
+
+.subcategoies_list {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.subcategoies_list a{
+    padding: 5px;
+    border-radius: 5px;
+    background: var(--color-gray5);
+    color: var(--color-gray3);
+}
+
+.subcategoies_list a.active{
+    background: var(--color-secundary);
+    color: var(--color-gray6);
+}
+
+/* ========================================== LISTA DE SUBCATEGORIAS ========================================== */
+/* ========================================== LISTA DE SUBCATEGORIAS ========================================== */
+/* ========================================== LISTA DE SUBCATEGORIAS ========================================== */
+
+/* ========================================== FOOTER ========================================== */
+/* ========================================== FOOTER ========================================== */
+/* ========================================== FOOTER ========================================== */
+
+
+footer{
+    width: 100%;
+    background-color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    gap: 20px; 
+    margin: auto;
+    width: 100%;
+    max-width: 1500px;
+    padding: 2rem;
+}
+
+
+footer .container .sec.about-us{
+    max-width: 300px;
+}
+
+footer .container h3{
+    position: relative;
+    color: var(--color-white);
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+}
+
+footer .container h3::before{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+footer p{
+    color: var(--color-gray5);
+    text-align: justify;
+}
+
+footer .about-us .mapa{
+    padding-top: -10px;
+    color: var(--color-gray5);
+}
+
+.redes {
+    display: flex;
+    padding-left: 0;
+}
+
+
+.redes .contact-icons{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.redes .contact-icons a{
+    text-decoration: none;
+    color: var(--color-secundary);
+    background: var(--color-white);
+    border-radius: 20px;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    transition: 0.3s;
+}
+
+.redes .contact-icons a:hover{
+    color: var(--color-gray5);
+    background: var(--color-primary);
+    transition: 0.3s;
+}
+
+.links{
+    position: relative;
+    max-width: 300px;
+}
+
+
+.links ul li{
+    text-decoration: none;
+    list-style: none;
+    margin: 5px 0;
+}
+
+.links ul li a{
+    color: var(--color-gray4);
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.links ul li a label{
+    position: relative;
+    left: 0;
+    top: 0;
+    font-size: 15px;
+}
+
+.links ul li a:hover{
+    color: var(--color-white);
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.contacte-nos{
+    max-width: 300px;
+    margin-right: 0 !important;
+}
+
+.contacte-nos .info{
+    position: relative;
+    padding-left: 10px;
+}
+
+.contacte-nos .info li{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.contacte-nos .info li span:first-child{
+    color: var(--color-gray4);
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contacte-nos .info li span{
+    color: var(--color-gray4);
+}
+
+.contacte-nos .info li p{
+    margin-bottom: 0;
+}
+
+.contacte-nos .info li a{
+    color: var(--color-gray4);
+    text-decoration: none;
+}
+
+.contacte-nos .info li a:hover{
+    color: var(--color-gray5);
+    text-decoration: none;
+}
+
+.copyright{
+    background: var(--color-secundary);
+    text-align: center;
+    color: var(--color-gray4);
+}
+.copyright p{
+    padding: 10px;
+}
+
+/* ========================================== FOOTER ========================================== */
+/* ========================================== FOOTER ========================================== */
+/* ========================================== FOOTER ========================================== */
+
+
+/*.fade message-sec*/
+
+
+@media only screen and (max-width: 1222px) {
+
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+
+    nav {
+        padding: 0 30px;
+    }
+
+    nav .content{
+        width: 100%;
+        padding: 10px 0;
+        padding-bottom: 0;
+    }
+
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+
+    header {
+        padding: 0 30px;
+    }
+
+    header .pesquisar-form input{
+        width: 15rem;
+    }
+
+    header .pesquisar-form select{
+        display: none;
+    }
+
+    .show-ocult-list:hover .ocult-list{
+        display: grid;
+    }
+
+    .ocult-list {
+        left: 0;
+        right: -100%;
+        width: fit-content;
+    }
+
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+
+        
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+
+    .main-body {
+        padding: 30px 30px;
+        gap: 20px;
+    }
+
+    .main-body aside{
+        display: none;
+    }
+
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+        
+    /*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+    /*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+    /*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+    
+
+    .heading-div {
+        text-align: center;
+        padding: 20px;
+        font-size: 2.5em;
+        font-weight: 400;
+    }
+
+    .bg-image-div {
+        position: relative;
+        height: 25rem;
+        overflow: hidden;
+    }
+
+    .bg-image-div img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: -1; 
+        border-radius: 20px;
+    }
+
+    .bg-image-div p{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        font-size: 0.7em;
+        color: var(--color-text);
+        background: var(--color-gray5);
+        padding: 1.5rem;
+        border-radius: 5px;
+        font-weight: 400;
+        width: 20rem;
+        line-height: 1.5em;
+        filter: opacity(0.7);
+    }
+
+    /*==================================== ABOUT PAGE ==================================== */
+    /*==================================== ABOUT PAGE ==================================== */
+    /*==================================== ABOUT PAGE ==================================== */
+    
+    /*==================================== CONTACTE PAGE ==================================== */
+    /*==================================== CONTACTE PAGE ==================================== */
+    /*==================================== CONTACTE PAGE ==================================== */
+
+    .contact-header img{
+        width: 90%;
+    }
+
+    .contact-div {
+        padding: 1.5rem;
+    }
+
+    .contact-div .left h3{
+        font-size: 1.6em;
+    }
+
+    .contact-div .right h3{
+        font-size: 1.6em;
+    }
+
+    .faqs-div {
+        padding: 20px 20px;
+    }
+
+    .faqs-div .faq .faq-p{
+        min-height: 0;
+        height: 0;
+        overflow: hidden;
+        font-size: 1.15em;
+        color: var(--color-gray1);
+        background: var(--color-gray6);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .faqs-div .faq .faq-p p{
+        padding: 1rem;
+    }
+
+    .faqs-div .faq.active .faq-p{
+        height: 15rem;
+        font-size: 1.15em;
+    }
+    /*==================================== CONTACTE PAGE ==================================== */
+    /*==================================== CONTACTE PAGE ==================================== */
+    /*==================================== CONTACTE PAGE ==================================== */
+
+    
+}
+
+@media only screen and (max-width: 881px) {
+    .main-body {
+        padding: 20px 20px;
+    }
+
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+
+    nav .content{
+        display: none;
+    }
+
+    nav .responsive-content {
+        display: flex;
+    }
+
+    nav .content ul li a{
+        color: var(--color-text);
+        padding: 10px;
+        padding-bottom: 15px;
+        font-weight: 600;
+    }
+
+    nav .content ul li a.active{
+        color: var(--color-gray6);
+        background: var(--color-secundary);
+        margin: 5px 0;
+    }
+
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+    .ymrlogo {
+        display: none;
+    }
+
+    nav .responsive-content .ymrlogo {
+        display: block;
+    }
+
+
+    header {
+        width: 100%;
+        padding: 0 30px;
+        background: var(--color-gray5);
+    }
+
+    header .content.space-bet-flex{
+        flex-direction: row-reverse;
+    }
+
+
+    header .pesquisar-form input{
+        width: 10rem;
+    }
+
+    header .pesquisar-form select{
+        display: none;
+    }
+
+
+    .ocult-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+
+        
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+
+
+    .main-body .main-section .product-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+        margin: auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .main-body .main-section .scroll-auto{
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        mask-image: linear-gradient(90deg,transparent,#fff 5%,#fff 95%,transparent);
+    }
+
+    .main-body aside{
+        display: none;
+    }
+
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+
+    .product-card h2{
+        font-size: 1em;
+    }
+    
+    .product-view {
+        flex-wrap: wrap;
+    }
+
+    .product-view .big-product-card {
+        width: 18rem;
+    }
+
+    .product-view .product-tab .product-tab-header {
+        gap: 5px;
+    }
+
+    .product-view .product-tab .product-tab-header button{
+        padding: 10px 5px;
+    }
+    
+    
+    /* ========================================== PRODUCT-CARD ========================================== */
+    /* ========================================== PRODUCT-CARD ========================================== */
+    /* ========================================== PRODUCT-CARD ========================================== */
+        
+    footer .container{
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    
+    /*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+    /*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+    /*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+
+
+    .about-hero .right h2 { 
+        font-size: 2.5em;
+    }
+
+    .about-hero .right p { 
+        font-size: 1.1em;
+    }
+
+    .big-newsletter {
+        align-items: left;
+        justify-content: left;
+        gap: 20px;
+    }
+
+    .big-newsletter .left p{
+        font-size: 1.2em;
+    }
+
+    .big-newsletter .right{
+        font-size: 1.2em;
+        color: var(--color-white);
+    }
+
+    /*==================================== ABOUT PAGE ==================================== */
+    /*==================================== ABOUT PAGE ==================================== */
+    /*==================================== ABOUT PAGE ==================================== */
+        /* ========================================== USER PAGE ========================================== */
+    /* ========================================== USER PAGE ========================================== */
+    /* ========================================== USER PAGE ========================================== */
+    /*
+    .user-card>div {
+        padding: 0;
+    }
+    */
+
+    .user-card {
+        width: 100%;
+        display: flex;
+        background: var(--color-gray5);
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+    .user-card-menu {
+        width: 100%;
+        max-width: 100%;
+        background: var(--color-text);
+        padding: 2rem 0;
+        padding-bottom: 0;
+    }
+
+    .user-card-menu .user-card-menu-header{
+        padding-bottom: 10px;
+    }
+
+    .user-card-menu .user-card-menu-header img{
+        width: 50px;
+    }
+
+    .user-card-menu .user-card-menu-header h2{
+        font-size: 1em;
+    }
+
+    .user-card-menu ul{
+        padding: 10px 0;
+        display: flex;
+        padding-bottom: 0;
+    }
+
+    .user-card-menu ul li button{
+        padding: 5px;
+        width: 100%;
+        background: var(--color-text);
+        color: var(--color-white);
+        cursor: pointer;
+        border: 1px solid var(--color-dark);
+        text-align: left;
+        border-bottom: none;
+    }
+
+    .user-card-menu ul li button.active{
+        background: var(--color-secundary);
+        color: var(--color-white);
+    }
+
+    .user-card-menu ul li:nth-of-type(3) button {
+        display: none;
+    }
+    
+
+    .user-card-data {
+        width: 45rem;
+        background: var(--color-gray6);
+        padding: 0.5rem;
+        display: none;
+        position: relative;
+    }
+
+    .user-card-data-header {
+        font-size: 1.3em;
+    }
+
+
+    .user-card-data-footer {
+        position: relative;
+        bottom: 0;
+        right: 20px;
+        width: 100%;
+        text-align: right;
+    }
+    /* ========================================== USER PAGE ========================================== */
+    /* ========================================== USER PAGE ========================================== */
+    /* ========================================== USER PAGE ========================================== */
+
+
+}
+
+
+
+@media only screen and (max-width: 551px) {
+
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+
+    nav .responsive-content {
+        display: flex;
+    }
+
+    nav .content ul li a{
+        color: var(--color-text);
+        padding: 10px;
+        padding-bottom: 15px;
+        font-weight: 600;
+    }
+
+    nav .content ul li a.active{
+        color: var(--color-gray6);
+        background: var(--color-secundary);
+        margin: 5px 0;
+    }
+
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+    /* ========================================== NAV ========================================== */
+
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+    .ymrlogo {
+        display: none;
+    }
+
+    nav .responsive-content .ymrlogo {
+        display: block;
+    }
+
+
+    header {
+        width: 100%;
+        padding: 0 30px;
+        background: var(--color-gray5);
+    }
+
+    header .content.space-bet-flex{
+        flex-direction: row-reverse;
+    }
+
+    header .pesquisar-form input{
+        width: 10rem;
+    }
+
+    header .cart{
+        display: none;
+    }
+
+    .show-ocult-list:hover .ocult-list{
+        display: grid;
+    }
+
+    .ocult-list {
+        grid-template-columns: 1fr;
+    }
+    .show-ocult-list p span{
+        display: none;
+    }
+
+    .ocult-list li a{
+        text-wrap: nowrap;
+        color: var(--color-gray6);
+        padding: 10px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .ocult-list li a:hover{
+        background: var(--color-secundary);
+    }
+
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+    /* ========================================== HEADER ========================================== */
+
+        
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+
+    .main-body .main-section .grid-layout{
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    }
+
+    .main-body .main-section .product-grid{
+        grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    }
+
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+    /* ========================================== SECTIONS ========================================== */
+
+    /* ========================================== MAIN TABLE ========================================== */
+    /* ========================================== MAIN TABLE ========================================== */
+    /* ========================================== MAIN TABLE ========================================== */
+
+    .table-main thead tr th{
+        display: none;
+    }
+
+    .table-main tbody tr td{
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 10ch auto;
+        padding: 0.5rem 1rem;
+        /*display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: left;
+        font-weight: 400;*/
+    }
+
+    .table-main tbody tr td.img-td{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    td .td-p-category{
+        display: none;
+    }
+
+    td::before {
+        content: attr(data-cell);
+        font-weight: 400;
+        width: 100px;
+        color: var(--color-gray2);
+    }
+
+    .table-main tbody tr td.center{
+        text-align: left;
+    }
+
+    .table-main tbody tr td .btn{
+        width: 10rem;
+    }
+
+    .table-main tbody tr:nth-child(odd) {
+        background-color: var(--color-gray5);
+    }
+
+    .table-main tbody tr .min-input-box input {
+        width: 3rem;
+    }
+
+    .table-main img{
+        width: 80px;
+    }
+
+    /* ========================================== MAIN TABLE ========================================== */
+    /* ========================================== MAIN TABLE ========================================== */
+    /* ========================================== MAIN TABLE ========================================== */
+    
+    /*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+    /*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+    /*==================================== TELA DE LOGIN e CADASTRO ==================================== */
+
+    
+    .flex2 .logos-box img{
+        width: 4rem;
+    }
+
+
+    /*==================================== ABOUT PAGE ==================================== */
+    /*==================================== ABOUT PAGE ==================================== */
+    /*==================================== ABOUT PAGE ==================================== */
+
+
+}
+
+
